@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    
+<aura:handler name="init" value="{! this }" action="{! c.doInit }"/>    
+
+    <aura:attribute name="mapMarkers" type="Object[]"/>
+    <aura:attribute name="width"  type="String" default="100%" />
+    <aura:attribute name="height" type="String" default="200px" />
+    <aura:attribute name="location" type="SObject"/>
+    
+    <aura:handler event="c:PlotMapMarker" action="{!c.onPlotMapMarker}"/>
+        
+    <lightning:card title="Current Boat Location" >
+        <div aura:id="map" style="{!'width: ' + v.width + '; height: ' + v.height}">
+            <lightning:map mapMarkers="{! v.mapMarkers }" />
+        </div>
+    </lightning:card>
+    
+</aura:component>

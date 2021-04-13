@@ -1,0 +1,11 @@
+.THIS {
+}
+/** CSS **/
+.THIS.outerScroller {
+    /* fix innerScroller not scrollable */
+    border-radius: 1px;
+}
+.THIS.innerScroller {
+    /* make innerScroller rounded */
+    border-radius: 10px;
+}
